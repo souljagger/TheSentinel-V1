@@ -1,0 +1,17 @@
+# Ignores configuration files that may contain sensitive information.
+build.properties
+logs/
+
+# Doxygen's and Sphinx's output.
+docs/api/build
+
+# Ignores compiled binary files.
+*.ex?
+
+# Ignores log files.
+*.log
+
+# Ignores Finder metadata files on Mac
+.DS_Store
+
+docs/build
