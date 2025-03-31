@@ -1,7 +1,6 @@
-//+------------------------------------------------------------------+
-//| RiskManager.mqh                                                  |
-//| Gestion du risque par pourcentage                               |
-//+------------------------------------------------------------------+
+#ifndef __RISKMANAGER_MQH__
+#define __RISKMANAGER_MQH__
+
 class RiskManager
 {
 private:
@@ -24,9 +23,10 @@ public:
         double pointValue = (tickValue / tickSize);
 
         double lotSize = riskAmount / (stopLossInPoints * pointValue);
-        
-        // Ajustement selon le pas minimal
         lotSize = MathFloor(lotSize / lotStep) * lotStep;
+
         return NormalizeDouble(lotSize, 2);
     }
 };
+
+#endif
